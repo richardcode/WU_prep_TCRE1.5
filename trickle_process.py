@@ -9,9 +9,9 @@ from scipy.io import netcdf
 def proc_oldtrickle_list():
 
   #Correct the old file to have the correct server location
-  old_file = 'z_trickles_list.txt'
+  old_file = 'Data/z_trickles_list.txt'
   f_in = open(old_file,'r')
-  f_out = open('z_trickles_list_corserv.txt','w')
+  f_out = open('Data/z_trickles_list_corserv.txt','w')
   for line in f_in:
     f_line = line[-50:-1]
     f_out.write('http://upload2.cpdn.org/results/hadcm3n/trickle/'+f_line+'\n')
@@ -23,7 +23,7 @@ def proc_oldtrickle_list():
 
 def collect_trickle_umidsyears():
 
-  in_file = 'z_trickles_list_corserv.txt'
+  in_file = 'Data/z_trickles_list_corserv.txt'
   f_in = open(in_file,'r')
 
   coll_data = []
@@ -59,7 +59,7 @@ def collect_trickle_umidsyears():
       wanted_urls.append(targ_url)
 
   #Print the wanted urls to a file
-  f_out = open('z_trickles_list_complete.txt','w')
+  f_out = open('Data/z_trickles_list_complete.txt','w')
   for i in wanted_urls:
     f_out.write(i+'\n')
   f_out.close()
@@ -69,7 +69,7 @@ def collect_trickle_umidsyears():
 def download_trickles():
 
   #Download and store the wanted streams of the trickles
-  wanted_dls_f = 'z_trickles_list_complete.txt'
+  wanted_dls_f = 'Data/z_trickles_list_complete.txt'
   f_in = open(wanted_dls_f,'r')
   wanted_dls = (f_in.read().split('\n'))[:-1]
 
@@ -164,7 +164,7 @@ def main(stream):
   #Load the trickles 
   diffs_paths, diffs_umids, diffs_years = list_trickles(stream)
 
-  f_out_file = 'z_trickles_'+stream+'.txt'
+  f_out_file = 'Data/z_trickles_'+stream+'.txt'
 
 
   if os.path.isfile(f_out_file):
@@ -196,19 +196,5 @@ def main(stream):
 if __name__ == '__main__':
 
   download_trickles()
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
 
 

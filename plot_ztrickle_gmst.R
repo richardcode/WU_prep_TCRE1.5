@@ -1,4 +1,4 @@
-load('z_trickles_pd_anomaly.Rda')
+load('Data/z_trickles_pd_anomaly.Rda')
 
 #Read in the HadCRUT4 observations
 hc_data <- read.table('HadCRUT.4.4.0.0.annual_ns_avg.txt',fill=TRUE)
@@ -7,7 +7,7 @@ hc_temps <- hc_data[,2]
 
 hc_temps <- hc_temps - mean(hc_temps[hc_years>=base_start & hc_years<=base_end])
 
-png('z_trickles_gmst_anom.png',width=1200,height=800,res=180)
+png('Figures/z_trickles_gmst_anom.png',width=1200,height=800,res=180)
 plot(hist_data_a$year,hist_data_a$gm_field16,
 col = NA,
 #     type = "p",

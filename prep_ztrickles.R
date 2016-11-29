@@ -1,5 +1,5 @@
 #Process the trickle data to use in the analysis
-hist_data <- read.table('z_trickles_pd.txt',fill=TRUE)
+hist_data <- read.table('Data/z_trickles_pd.txt',fill=TRUE)
 hist_data <- hist_data[complete.cases(hist_data),]
 
 colnames(hist_data) <- c('umid','year','gm_field37','gm_field34','gm_field30','gm_field16','gm_field259','gm_field108','gm_field118','gm_field119','gm_field97','gm_field184','gm_field687','gm_field211','gm_field210','gm_field207','gm_field205','gm_field203','gm_field200','gm_field208','gm_field90', 'gm_field95','gm_field98','gm_field99','gm_field88','gm_field56','gm_field57','gm_field187','gm_field8','gm_field40',
@@ -20,10 +20,10 @@ hist_data <- hist_data[hist_data$gm_field16 > 280,]
 hist_data <- hist_data[hist_data$gm_field16 < 350,]
 
 #Save in R dataframe format
-save(hist_data, file='z_trickles_pd.Rda')
+save(hist_data, file='Data/z_trickles_pd.Rda')
 
 #Load in the z trickles
-load('z_trickles_pd.Rda')
+load('Data/z_trickles_pd.Rda')
 
 #Express temperature as anomalies from a base-period
 base_start <- 1881
@@ -40,4 +40,4 @@ for (umid in unique(hist_data$umid)) {
     hist_data_a <- rbind(hist_data_a,anom_df)
 }
 
-save(hist_data_a, file='z_trickles_pd_anomaly.Rda')
+save(hist_data_a, file='Data/z_trickles_pd_anomaly.Rda')
