@@ -1,9 +1,11 @@
 load('Data/z_trickles_pd_anomaly.Rda')
 
 #Read in the HadCRUT4 observations
-hc_data <- read.table('HadCRUT.4.4.0.0.annual_ns_avg.txt',fill=TRUE)
+hc_data <- read.table('Data/HadCRUT.4.4.0.0.annual_ns_avg.txt',fill=TRUE)
 hc_years <- hc_data[,1]
 hc_temps <- hc_data[,2]
+base_start <- 1881
+base_end <- 1900
 
 hc_temps <- hc_temps - mean(hc_temps[hc_years>=base_start & hc_years<=base_end])
 

@@ -16,8 +16,8 @@ colnames(hist_data) <- c('umid','year','gm_field37','gm_field34','gm_field30','g
 
 
 #REMOVE OUTLIERS, WHEN DISOCOVERED
-hist_data <- hist_data[hist_data$gm_field16 > 280,]
-hist_data <- hist_data[hist_data$gm_field16 < 350,]
+hist_data <- hist_data[(hist_data$gm_field16 > 280),]
+hist_data <- hist_data[(hist_data$gm_field16 < 350),]
 
 #Save in R dataframe format
 save(hist_data, file='Data/z_trickles_pd.Rda')
@@ -39,5 +39,9 @@ for (umid in unique(hist_data$umid)) {
     colnames(anom_df) <- colnames(umid_data)
     hist_data_a <- rbind(hist_data_a,anom_df)
 }
+
+same_umid <- function (x) { return (paste('z',substring(x,2,4),sep='')) }
+hist_data_a$umid <- lapply(hist_data_a$umid, same_umid)
+
 
 save(hist_data_a, file='Data/z_trickles_pd_anomaly.Rda')
