@@ -1,0 +1,110 @@
+ &nam_config
+  ICAL = 2,
+  ISIZE = 32,
+  VERSION = 4.5,
+  LBIGENDOUT = .FALSE.,
+  LWFIO = .FALSE.,
+  NNCFILES = 2
+  NCFILES = "/network/aopp/ares/mad/millar/rcp26_ancils/n48/ozone_rcp26_N48_1999_2010v2.nc","/home/millar/WU_prep_TCRE1.5/ancil_prep/ozone_rcp26_N96_1999_2010v2.nc"
+ /
+
+ &nam_gridconfig
+  IAVERT = 1,
+  NLEV = 19,
+  NO3LEV = 19,
+  LLEVSTOREUP = .TRUE.,
+  NAM_VERT = "/home/millar/WU_prep_TCRE1.5/ancil_prep/ozone_vertlevs.namelist",
+  IOVERT = 0,
+  LDEEPSOIL = .TRUE.,
+  NSOILLEV = 4,
+  SOILLEV(1) = 0.1,
+  SOILLEV(2) = 0.25,
+  SOILLEV(3) = 0.65,
+  SOILLEV(4) = 2.0
+ /
+
+ &nam_ozone
+  LOZONE = .TRUE.,
+  OZONE_FILEIN = "/network/aopp/ares/mad/millar/rcp26_ancils/n48/ozone_rcp26_N48_1999_2010v2.nc",
+  OZONE_NCNAME = "O3",
+  OZONE_FILEOUT = "/network/aopp/ares/mad/millar/rcp26_ancils/n48/ozone_rcp26_N48_1999_2010v2",
+  LOZONE_MMR = .TRUE.,
+  AOZONE_MRFAC = 1.0,
+  LOZONE_PERIODIC = .FALSE.,
+  IOZONE_TIMEUSAGE1 = 0,
+  IOZONE_TIMEUSAGE2 = 0,
+  IOZONE_STARTDATE(1) = 0000,
+  IOZONE_STARTDATE(2) = 1,
+  IOZONE_STARTDATE(3) = 16,
+  IOZONE_STARTDATE(4) = 0,
+  IOZONE_STARTDATE(5) = 0,
+  IOZONE_STARTDATE(6) = 0,
+  IOZONE_NTIMES = 12,
+  IOZONE_INTERVAL = 1,
+  IOZONE_INTUNIT = 1,
+  LOZONE_MM = .TRUE.
+ /
+
+ &nam_smow
+ /
+
+ &nam_slt
+ /
+
+ &nam_soil
+ /
+
+ &nam_veg
+ /
+
+ &nam_vegfrac
+ /
+
+ &nam_vegfunc
+ /
+
+ &nam_vegdist
+ /
+
+ &nam_sst
+ /
+
+ &nam_ice
+ /
+
+ &nam_orog
+ /
+
+ &nam_mask
+ /
+
+ &nam_lfrac
+ /
+
+ &nam_ausrmulti
+ /
+
+ &nam_ausrancil
+ /
+
+ &nam_ts1
+ /
+
+ &nam_flux
+ /
+
+ &nam_ousrmulti
+ /
+
+ &nam_ousrancil
+ /
+
+ &nam_genanc_config
+  NANCFILES = 1
+ /
+
+ &nam_genanc
+  LGENANC_FILE(1) = .FALSE.,
+
+ /
+

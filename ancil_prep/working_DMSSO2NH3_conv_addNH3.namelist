@@ -1,0 +1,144 @@
+ &nam_config
+  ICAL = 2,
+  ISIZE = 32,
+  VERSION = 4.5,
+  LBIGENDOUT = .FALSE.,
+  LWFIO = .FALSE.,
+  NNCFILES = 2
+  NCFILES = "/network/aopp/ares/mad/millar/rcp26_ancils/n48/DMSSO2NH3_18502100_RCP26_monthly.nc","/network/aopp/ares/mad/millar/rcp26_ancils/n48/DMSSO2NH3_18502100_RCP26_monthly.nc"
+ /
+
+ &nam_gridconfig
+  IAVERT = 0,
+  IOVERT = 0,
+  LDEEPSOIL = .TRUE.,
+  NSOILLEV = 4,
+  SOILLEV(1) = 0.1,
+  SOILLEV(2) = 0.25,
+  SOILLEV(3) = 0.65,
+  SOILLEV(4) = 2.0
+ /
+
+ &nam_ozone
+ /
+
+ &nam_smow
+ /
+
+ &nam_slt
+ /
+
+ &nam_soil
+ /
+
+ &nam_veg
+ /
+
+ &nam_vegfrac
+ /
+
+ &nam_vegfunc
+ /
+
+ &nam_vegdist
+ /
+
+ &nam_sst
+ /
+
+ &nam_ice
+ /
+
+ &nam_orog
+ /
+
+ &nam_mask
+ /
+
+ &nam_lfrac
+ /
+
+ &nam_ausrmulti
+ /
+
+ &nam_ausrancil
+ /
+
+ &nam_ts1
+ /
+
+ &nam_flux
+ /
+
+ &nam_ousrmulti
+ /
+
+ &nam_ousrancil
+ /
+
+ &nam_genanc_config
+  NANCFILES = 1
+ /
+
+ &nam_genanc
+  LGENANC_FILE(1) = .TRUE.,
+  GENANC_FILEOUT(1) = "/network/aopp/ares/mad/millar/rcp26_ancils/n48/DMSSO2NH3_18502100_RCP26_monthly",
+  IGENANC_MODEL(1) = 1,
+  IGENANC_INTHD8(1) = -1,
+  LGENANC_PERIODIC(1) = .FALSE.,
+  IGENANC_TIMEUSAGE1(1) = 0,
+  IGENANC_TIMEUSAGE2(1) = 0,
+  IGENANC_STARTDATE(1,1) = 0000,
+  IGENANC_STARTDATE(2,1) = 1,
+  IGENANC_STARTDATE(3,1) = 16,
+  IGENANC_STARTDATE(4,1) = 0,
+  IGENANC_STARTDATE(5,1) = 0,
+  IGENANC_STARTDATE(6,1) = 0,
+  IGENANC_NTIMES(1) = 12,
+  IGENANC_INTERVAL(1) = 1,
+  IGENANC_INTUNIT(1) = 1,
+  LGENANC_MM(1) = .TRUE.
+  IGENANC_NFIELD(1) = 4
+  IGENANC_FILEINID(1,1) = 1,
+  IGENANC_STASHCODE(1,1) = 59,
+  IGENANC_PPCODE(1,1) = 570,
+  GENANC_NCNAME(1,1) = "field570",
+  IGENANC_LEVTYPE(1,1) = 0,
+  IGENANC_NLEV(1,1) = 1,
+  LGENANC_THETA(1,1) = .TRUE.
+  IGENANC_DATATYPE(1,1) = 1,
+  IGENANC_MASKTYPE(1,1) = 0,
+  IGENANC_MASK(1,1) = 0,
+  IGENANC_FILEINID(2,1) = 2,
+  IGENANC_STASHCODE(2,1) = 127,
+  IGENANC_PPCODE(2,1) = 572,
+  GENANC_NCNAME(2,1) = "field572",
+  IGENANC_LEVTYPE(2,1) = 0,
+  IGENANC_NLEV(2,1) = 1,
+  LGENANC_THETA(2,1) = .TRUE.
+  IGENANC_DATATYPE(2,1) = 1,
+  IGENANC_MASKTYPE(2,1) = 0,
+  IGENANC_MASK(2,1) = 0,
+  IGENANC_FILEINID(3,1) = 1,
+  IGENANC_STASHCODE(3,1) = 58,
+  IGENANC_PPCODE(3,1) = 569,
+  GENANC_NCNAME(3,1) = "field569",
+  IGENANC_LEVTYPE(3,1) = 0,
+  IGENANC_NLEV(3,1) = 1,
+  LGENANC_THETA(3,1) = .TRUE.
+  IGENANC_DATATYPE(3,1) = 1,
+  IGENANC_MASKTYPE(3,1) = 0,
+  IGENANC_MASK(3,1) = 0,
+  IGENANC_FILEINID(4,1) = 1,
+  IGENANC_STASHCODE(4,1) = 126,
+  IGENANC_PPCODE(4,1) = 569,
+  GENANC_NCNAME(4,1) = "field569_1",
+  IGENANC_LEVTYPE(4,1) = 0,
+  IGENANC_NLEV(4,1) = 1,
+  LGENANC_THETA(4,1) = .TRUE.
+  IGENANC_DATATYPE(4,1) = 1,
+  IGENANC_MASKTYPE(4,1) = 0,
+  IGENANC_MASK(4,1) = 0,
+
+ /
+
