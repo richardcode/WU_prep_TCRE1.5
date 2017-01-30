@@ -22,12 +22,16 @@ cube.coord('longitude').units = 'degrees_east'
 cube.coord('latitude').var_name = 'latitude'
 cube.coord('latitude').units = 'degrees_north'
 
+#Add conversion factor into kg/m2/s of S as opposed to SO2
+cube = 32.066 / 64.066 * cube
+#Alternative conversion factor: 1TgSO2/yr = 16073668268528.676 kgm-2s-1 of SO2
 
-surf_weights = np.array([0,0.5,1,1,1,1,1,1])
-high_weights = np.array([1,0.5,0,0,0,0,0,0])
+#Half industry and all of energy go into high level SO2 emissions (Met Office convention)
+surf_weights = np.array([1.0,0.0,0.5,1.0,1.0,1.0,1.0,1.0])
+high_weights = np.array([0.0,1.0,0.5,0.0,0.0,0.0,0.0,0.0])
 
-surf_cube = cube.collapsed('sector',iris.analysis.MEAN,weights=np.ones(cube.shape)*surf_weights[np.newaxis,:,np.newaxis,np.newaxis])
-high_cube = cube.collapsed('sector',iris.analysis.MEAN,weights=np.ones(cube.shape)*high_weights[np.newaxis,:,np.newaxis,np.newaxis])
+surf_cube = cube.collapsed('sector',iris.analysis.SUM,weights=np.ones(cube.shape)*surf_weights[np.newaxis,:,np.newaxis,np.newaxis])
+high_cube = cube.collapsed('sector',iris.analysis.SUM,weights=np.ones(cube.shape)*high_weights[np.newaxis,:,np.newaxis,np.newaxis])
 
 high_cube.rename('HIGH LEVEL  SO2 EMISSIONS KG/M2/S')
 high_cube.long_name ='HIGH LEVEL  SO2 EMISSIONS KG/M2/S'
@@ -75,7 +79,7 @@ out_nc_raw_names = ['DMS-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr
 out_nc_regrid = out_nc_raw[:-3]+'_n48.nc'
 for i in range(0,len(out_nc_raw_names)):
   iris.fileformats.netcdf.save(cubes[i],filename=cmip6_data_dir+out_nc_raw_names[i],netcdf_format='NETCDF4')
-  os.system('cdo remapcon,$HOME/WU_prep_TCRE1.5/ancil_prep/N48_grid '+cmip6_data_dir+out_nc_raw_names[i]+' '+cmip6_data_dir_regrid+out_nc_raw_names[i][:-3]+'_n48.nc')
+  os.system('$HOME/.local/cdo/bin/cdo remapcon,$HOME/WU_prep_TCRE1.5/ancil_prep/N48_grid '+cmip6_data_dir+out_nc_raw_names[i]+' '+cmip6_data_dir_regrid+out_nc_raw_names[i][:-3]+'_n48.nc')
 
 #Can't find any CMIP6 specification for ocean DMS (only biomass burning), maybe because
 #this is generated interactively by ocean biochemistry?
