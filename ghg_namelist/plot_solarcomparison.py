@@ -10,8 +10,8 @@ ycube = cube.aggregated_by(['year'],iris.analysis.MEAN)
 cmip_soldata = ycube.data
 cmip_solyears = ycube.coord('year').points
 
-#Scale down the CMIP6 solar data to have the same forcing in 2000 as CMIP5
-cmip_soldata_rs = cmip_soldata - cmip_soldata[cmip_solyears==2000] + 1366.10544
+#Scale down the CMIP6 solar data to have the same forcing in 2000 as z-series
+cmip_soldata_rs = cmip_soldata - cmip_soldata[cmip_solyears==2000] + 1365.0 + 1.0666
 
 #Load the CMIP5 data
 f_in = open('solar_cmip5','r')

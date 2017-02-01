@@ -87,9 +87,9 @@ def xmlgen():
   #Set xml tags that are the same for all workunits
   file_sulphox='sulpc_oxidants_19_A2_1990'
   file_ozone='ozone_cmip6hist_2000_2014_n48'
-  file_solar='solar_cmip6_rescale_v2'
-  file_so2dms='SO2DMS_cmip6hist_2000_2014_n48_v2'
-  file_ghg='ghg_cmip6_hist_19992015_nsy'
+  file_solar='solar_cmip6_rescale_f'
+  file_so2dms='SO2DMS_cmip6hist_2000_2014_n48_f'
+  file_ghg='ghg_cmip6_hist_19992015_f'
   file_flux = 'waterfix.ancil.be.32'
   file_spec_sw = 'spec3a_sw_3_asol2c_hadcm3'
   file_spec_lw = 'spec3a_lw_3_asol2c_hadcm3'
