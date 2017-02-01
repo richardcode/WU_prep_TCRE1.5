@@ -95,7 +95,7 @@ def xmlgen():
   file_spec_lw = 'spec3a_lw_3_asol2c_hadcm3'
   file_volc = 'NAT_VOLC'
   file_volcanic = 'sato_hist73lat_volc_20002014'
-  run_years='10'
+  run_years='14'
   file_stash = 'xabnk.stashc.monthly_TCRE_full'
 
   #Starting umid
