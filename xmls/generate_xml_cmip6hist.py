@@ -55,7 +55,7 @@ def xmlgen():
   #File containing XML template
   templatefile='./headers/main_site_header_hadcm3.xml'
   #Output XML filename
-  outxmlfile='./hadcm3s_tcre_cmip6hist20002014.xml'
+  outxmlfile='./hadcm3s_tcre_cmip6hist20002014_v2.xml'
   
 
   #Read the parameter lookup table 
@@ -94,7 +94,7 @@ def xmlgen():
   file_spec_sw = 'spec3a_sw_3_asol2c_hadcm3'
   file_spec_lw = 'spec3a_lw_3_asol2c_hadcm3'
   file_volc = 'NAT_VOLC'
-  file_volcanic = 'sato_hist73lat_volc_20002014'
+  file_volcanic = 'sato_hist73lat_volc_20002015'
   run_years='14'
   file_stash = 'xabnk.stashc.monthly_TCRE_full'
 
@@ -105,7 +105,7 @@ def xmlgen():
   count  =0
 
   outtreeroot.find('batch_name').text = 'HadCM3S TCRE historical integration'
-  outtreeroot.find('batch_owner').text = 'Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt; Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt'
+  outtreeroot.find('batch_owner').text = 'Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;, Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;'
   outtreeroot.find('batch_first_start_year').text = str(model_start_year)
   outtreeroot.find('batch_last_start_year').text = str(model_start_year)
   outtreeroot.find('batch_umid_start').text = umid
