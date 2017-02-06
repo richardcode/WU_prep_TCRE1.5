@@ -75,16 +75,20 @@ iris.fileformats.netcdf.save(mcube,filename=cmip6_data_dir_regrid+out_nc_regrid,
 #os.system('cdo remapcon,$HOME/WU_prep_TCRE1.5/ancil_prep/N48_grid '+cmip6_data_dir+out_nc_vregrid+' '+cmip6_data_dir_regrid+out_nc_regrid)
 os.system('ncatted -O -a calendar,t,m,c,"360-day" '+cmip6_data_dir_regrid+out_nc_regrid)
 
+#Include final name that is short enough for CPDN filename restrictions
+final_anc = 'ozone_cmip6hist_2000_2014'
+
+
 
 #Adapt mkancil template
 subprocess.call(['cp','working_ozone_conv_cmip6.namelist','temp_working_ozone_conv_cmip6.namelist'])
 os.system("sed -i '/  NCFILES = /c"+r"\ "+" NCFILES = \""+cmip6_data_dir_regrid+out_nc_regrid+"\""+r"' "+" temp_working_ozone_conv_cmip6.namelist")
 os.system("sed -i '/  OZONE_FILEIN = /c"+r"\ "+" OZONE_FILEIN = \""+cmip6_data_dir_regrid+out_nc_regrid+"\""+r"' "+" temp_working_ozone_conv_cmip6.namelist")
-os.system("sed -i '/  OZONE_FILEOUT = /c"+r"\ "+" OZONE_FILEOUT = \""+cmip6_data_dir_regrid+out_nc_regrid[:-3]+"\""+r"' "+" temp_working_ozone_conv_cmip6.namelist")
+os.system("sed -i '/  OZONE_FILEOUT = /c"+r"\ "+" OZONE_FILEOUT = \""+cmip6_data_dir_regrid+final_anc+"\""+r"' "+" temp_working_ozone_conv_cmip6.namelist")
 #Convert to ancil using xancil
 os.system('$HOME/software/mkancil0.56 < temp_working_ozone_conv_cmip6.namelist')
 
-subprocess.call(['gzip',cmip6_data_dir_regrid+out_nc_regrid[:-3]])
+subprocess.call(['gzip',cmip6_data_dir_regrid+final_anc])
 subprocess.call(['rm','temp_working_ozone_conv_cmip6.namelist'])
 
 

@@ -94,14 +94,17 @@ os.system('ncks -A '+cmip6_data_dir_regrid+out_nc_raw_names[1][:-3]+'_n48.nc '+c
 os.system('ncatted -O -a calendar,time,m,c,"360_day" '+cmip6_data_dir_regrid+out_nc_regrid)
 os.system('ncatted -O -a history,global,d,, '+ cmip6_data_dir_regrid+out_nc_regrid)
 
+#Include final name that is short enough for CPDN filename restrictions
+final_anc = 'SO2DMS_cmip6h_2000_2014'
+
 
 #Adapt mkancil template
 subprocess.call(['cp','working_so2dms_conv.namelist','temp_working_so2dms_conv.namelist'])
 os.system("sed -i '/  NCFILES = /c"+r"\ "+" NCFILES = \""+cmip6_data_dir_regrid+out_nc_regrid+"\""+r"' "+" temp_working_so2dms_conv.namelist")
-os.system("sed -i '/  GENANC_FILEOUT(1) = /c"+r"\ "+" GENANC_FILEOUT(1) = \""+cmip6_data_dir_regrid+out_nc_regrid[:-3]+"\""+r"' "+" temp_working_so2dms_conv.namelist")#Convert to ancil using xancil
+os.system("sed -i '/  GENANC_FILEOUT(1) = /c"+r"\ "+" GENANC_FILEOUT(1) = \""+cmip6_data_dir_regrid+final_anc+"\""+r"' "+" temp_working_so2dms_conv.namelist")#Convert to ancil using xancil
 os.system('$HOME/software/mkancil0.56 < temp_working_so2dms_conv.namelist')
 
-subprocess.call(['gzip',cmip6_data_dir_regrid+out_nc_regrid[:-3]])
+subprocess.call(['gzip',cmip6_data_dir_regrid+final_anc])
 subprocess.call(['rm','temp_working_so2dms_conv.namelist'])
 
 
