@@ -55,7 +55,7 @@ def xmlgen():
   #File containing XML template
   templatefile='./headers/main_site_header_hadcm3.xml'
   #Output XML filename
-  outxmlfile='./hadcm3s_tcre_cmip6hist20002014_v2.xml'
+  outxmlfile='./hadcm3s_tcre_cmip6hist20002014_v3.xml'
   
 
   #Read the parameter lookup table 
@@ -88,7 +88,7 @@ def xmlgen():
   file_sulphox='sulpc_oxidants_19_A2_1990'
   file_ozone='ozone_cmip6hist_2000_2014_n48'
   file_solar='solar_cmip6_rescale_f'
-  file_so2dms='SO2DMS_cmip6hist_2000_2014_n48_f'
+  file_so2dms='SO2DMS_cmip6h_2000_2014_n48'
   file_ghg='ghg_cmip6_hist_19992015_f'
   file_flux = 'waterfix.ancil.be.32'
   file_spec_sw = 'spec3a_sw_3_asol2c_hadcm3'

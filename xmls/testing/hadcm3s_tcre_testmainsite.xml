@@ -1,0 +1,922 @@
+<?xml version="1.0"?>
+<WorkGen>
+    <dbexpt>cpdnexpt</dbexpt>
+    <app_config>config_dir/config_hadcm3s_v2.2_yearly.xml</app_config>
+    <upload_handler>http://upload2.cpdn.org/cgi-bin/file_upload_handler</upload_handler>
+    <result_template_prefix>upload_templates/oxford2.2/result_template_upload2</result_template_prefix>
+    <download_url_base>http://download.cpdn.org/download/</download_url_base>
+    <download_dir_base>/storage/download/</download_dir_base>
+    <project_dir>/var/www/boinc/projects/cpdnboinc</project_dir>
+    <namelist_dir>namelist_template_files/HadCM3S</namelist_dir>
+    <global_stashc>xabnk.stashc.monthly_TCRE_full</global_stashc>
+    <batch_name>HadCM3S TCRE historical integration</batch_name>
+    <batch_desc>HadCM3S Main Experiment</batch_desc>
+    <batch_owner>Richard Millar &amp;lt;richard.millar@physics.ox.ac.uk&amp;gt;, Sarah Sparrow &amp;lt;sarah.sparrow@oerc.ox.ac.uk&amp;gt;</batch_owner>
+    <batch_first_start_year>2000</batch_first_start_year>
+    <batch_last_start_year>2000</batch_last_start_year>
+    <batch_umid_start>7000</batch_umid_start>
+    <batch_umid_end>700g</batch_umid_end>
+    <batch_proj>TCRE</batch_proj>
+    <batch_tech_info>TCRE main experiment test </batch_tech_info>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7000</exptid>
+            <file_atmos>zjkt_2000.astart</file_atmos>
+            <file_ocean>zjkt_2000.ostart</file_ocean>
+            <vf1>0.788749087409</vf1>
+            <ct>0.000241868834265</ct>
+            <cw_land>0.0015500645877</cw_land>
+            <cw_sea>0.000387516146926</cw_sea>
+            <rhcrit>0.95, 0.9, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996</rhcrit>
+            <eacf>0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.657400190414, 0.625920152331, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248</eacf>
+            <entcoef>4.8135098147</entcoef>
+            <alpham>0.527564923208</alpham>
+            <dtice>8.03107691375</dtice>
+            <ice_size>7.84864666342e-05</ice_size>
+            <dtheta>0.0</dtheta>
+            <isopyc>2421.91142157</isopyc>
+            <vertvisc>0.000107595436626</vertvisc>
+            <vdiffsurf>2.83695668722e-06</vdiffsurf>
+            <vdiffdepth>4.00479489049e-08</vdiffdepth>
+            <mllam>1.28846459889</mllam>
+            <mldel>77.0716817666</mldel>
+            <l0>0.000172918664462</l0>
+            <l1>7.86114851516e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.78066865995</volsca>
+            <anthsca>0.843450104474</anthsca>
+            <start_level_gwdrag>3.0</start_level_gwdrag>
+            <kay_gwave>10802.5867905</kay_gwave>
+            <kay_lee_gwave>162038.801857</kay_lee_gwave>
+            <asym_lambda>0.242162819863</asym_lambda>
+            <charnock>0.0179152014296</charnock>
+            <z0fsea>0.000486191031722</z0fsea>
+            <g0>15.7041646519</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7001</exptid>
+            <file_atmos>zjkt_2000.astart</file_atmos>
+            <file_ocean>zjkt_2000.ostart</file_ocean>
+            <vf1>0.788749087409</vf1>
+            <ct>0.000241868834265</ct>
+            <cw_land>0.0015500645877</cw_land>
+            <cw_sea>0.000387516146926</cw_sea>
+            <rhcrit>0.95, 0.9, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996</rhcrit>
+            <eacf>0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.657400190414, 0.625920152331, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248</eacf>
+            <entcoef>4.8135098147</entcoef>
+            <alpham>0.527564923208</alpham>
+            <dtice>8.03107691375</dtice>
+            <ice_size>7.84864666342e-05</ice_size>
+            <dtheta>0.91172</dtheta>
+            <isopyc>2421.91142157</isopyc>
+            <vertvisc>0.000107595436626</vertvisc>
+            <vdiffsurf>2.83695668722e-06</vdiffsurf>
+            <vdiffdepth>4.00479489049e-08</vdiffdepth>
+            <mllam>1.28846459889</mllam>
+            <mldel>77.0716817666</mldel>
+            <l0>0.000172918664462</l0>
+            <l1>7.86114851516e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.78066865995</volsca>
+            <anthsca>0.843450104474</anthsca>
+            <start_level_gwdrag>3.0</start_level_gwdrag>
+            <kay_gwave>10802.5867905</kay_gwave>
+            <kay_lee_gwave>162038.801857</kay_lee_gwave>
+            <asym_lambda>0.242162819863</asym_lambda>
+            <charnock>0.0179152014296</charnock>
+            <z0fsea>0.000486191031722</z0fsea>
+            <g0>15.7041646519</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7002</exptid>
+            <file_atmos>zjkt_2000.astart</file_atmos>
+            <file_ocean>zjkt_2000.ostart</file_ocean>
+            <vf1>0.788749087409</vf1>
+            <ct>0.000241868834265</ct>
+            <cw_land>0.0015500645877</cw_land>
+            <cw_sea>0.000387516146926</cw_sea>
+            <rhcrit>0.95, 0.9, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996</rhcrit>
+            <eacf>0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.657400190414, 0.625920152331, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248</eacf>
+            <entcoef>4.8135098147</entcoef>
+            <alpham>0.527564923208</alpham>
+            <dtice>8.03107691375</dtice>
+            <ice_size>7.84864666342e-05</ice_size>
+            <dtheta>0.81401</dtheta>
+            <isopyc>2421.91142157</isopyc>
+            <vertvisc>0.000107595436626</vertvisc>
+            <vdiffsurf>2.83695668722e-06</vdiffsurf>
+            <vdiffdepth>4.00479489049e-08</vdiffdepth>
+            <mllam>1.28846459889</mllam>
+            <mldel>77.0716817666</mldel>
+            <l0>0.000172918664462</l0>
+            <l1>7.86114851516e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.78066865995</volsca>
+            <anthsca>0.843450104474</anthsca>
+            <start_level_gwdrag>3.0</start_level_gwdrag>
+            <kay_gwave>10802.5867905</kay_gwave>
+            <kay_lee_gwave>162038.801857</kay_lee_gwave>
+            <asym_lambda>0.242162819863</asym_lambda>
+            <charnock>0.0179152014296</charnock>
+            <z0fsea>0.000486191031722</z0fsea>
+            <g0>15.7041646519</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7003</exptid>
+            <file_atmos>zjkt_2000.astart</file_atmos>
+            <file_ocean>zjkt_2000.ostart</file_ocean>
+            <vf1>0.788749087409</vf1>
+            <ct>0.000241868834265</ct>
+            <cw_land>0.0015500645877</cw_land>
+            <cw_sea>0.000387516146926</cw_sea>
+            <rhcrit>0.95, 0.9, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996, 0.87914771996</rhcrit>
+            <eacf>0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.688880228497, 0.657400190414, 0.625920152331, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248, 0.594440114248</eacf>
+            <entcoef>4.8135098147</entcoef>
+            <alpham>0.527564923208</alpham>
+            <dtice>8.03107691375</dtice>
+            <ice_size>7.84864666342e-05</ice_size>
+            <dtheta>0.57357</dtheta>
+            <isopyc>2421.91142157</isopyc>
+            <vertvisc>0.000107595436626</vertvisc>
+            <vdiffsurf>2.83695668722e-06</vdiffsurf>
+            <vdiffdepth>4.00479489049e-08</vdiffdepth>
+            <mllam>1.28846459889</mllam>
+            <mldel>77.0716817666</mldel>
+            <l0>0.000172918664462</l0>
+            <l1>7.86114851516e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.78066865995</volsca>
+            <anthsca>0.843450104474</anthsca>
+            <start_level_gwdrag>3.0</start_level_gwdrag>
+            <kay_gwave>10802.5867905</kay_gwave>
+            <kay_lee_gwave>162038.801857</kay_lee_gwave>
+            <asym_lambda>0.242162819863</asym_lambda>
+            <charnock>0.0179152014296</charnock>
+            <z0fsea>0.000486191031722</z0fsea>
+            <g0>15.7041646519</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 667993900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7004</exptid>
+            <file_atmos>zjky_2000.astart</file_atmos>
+            <file_ocean>zjky_2000.ostart</file_ocean>
+            <vf1>2.3259475859</vf1>
+            <ct>0.000480841169577</ct>
+            <cw_land>0.000114007811038</cw_land>
+            <cw_sea>2.42023433115e-05</cw_sea>
+            <rhcrit>0.95, 0.9, 0.85, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339</rhcrit>
+            <eacf>0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.683862225231, 0.647089780185, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138</eacf>
+            <entcoef>3.29267783401</entcoef>
+            <alpham>0.546361834459</alpham>
+            <dtice>6.6884403958</dtice>
+            <ice_size>2.35591011068e-05</ice_size>
+            <dtheta>0.0</dtheta>
+            <isopyc>143.909867752</isopyc>
+            <vertvisc>5.08143404538e-05</vertvisc>
+            <vdiffsurf>1.83036145056e-05</vdiffsurf>
+            <vdiffdepth>8.2398572515e-08</vdiffdepth>
+            <mllam>1.21627288607</mllam>
+            <mldel>18.8587542943</mldel>
+            <l0>0.000120147358835</l0>
+            <l1>5.46208377471e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.77115104287</volsca>
+            <anthsca>1.22408278096</anthsca>
+            <start_level_gwdrag>4.0</start_level_gwdrag>
+            <kay_gwave>18523.8971389</kay_gwave>
+            <kay_lee_gwave>277858.457084</kay_lee_gwave>
+            <asym_lambda>0.322801305297</asym_lambda>
+            <charnock>0.0183838090278</charnock>
+            <z0fsea>0.00108047681958</z0fsea>
+            <g0>20.5756729407</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp>
+            <diff_exp_q>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7005</exptid>
+            <file_atmos>zjky_2000.astart</file_atmos>
+            <file_ocean>zjky_2000.ostart</file_ocean>
+            <vf1>2.3259475859</vf1>
+            <ct>0.000480841169577</ct>
+            <cw_land>0.000114007811038</cw_land>
+            <cw_sea>2.42023433115e-05</cw_sea>
+            <rhcrit>0.95, 0.9, 0.85, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339</rhcrit>
+            <eacf>0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.683862225231, 0.647089780185, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138</eacf>
+            <entcoef>3.29267783401</entcoef>
+            <alpham>0.546361834459</alpham>
+            <dtice>6.6884403958</dtice>
+            <ice_size>2.35591011068e-05</ice_size>
+            <dtheta>0.91172</dtheta>
+            <isopyc>143.909867752</isopyc>
+            <vertvisc>5.08143404538e-05</vertvisc>
+            <vdiffsurf>1.83036145056e-05</vdiffsurf>
+            <vdiffdepth>8.2398572515e-08</vdiffdepth>
+            <mllam>1.21627288607</mllam>
+            <mldel>18.8587542943</mldel>
+            <l0>0.000120147358835</l0>
+            <l1>5.46208377471e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.77115104287</volsca>
+            <anthsca>1.22408278096</anthsca>
+            <start_level_gwdrag>4.0</start_level_gwdrag>
+            <kay_gwave>18523.8971389</kay_gwave>
+            <kay_lee_gwave>277858.457084</kay_lee_gwave>
+            <asym_lambda>0.322801305297</asym_lambda>
+            <charnock>0.0183838090278</charnock>
+            <z0fsea>0.00108047681958</z0fsea>
+            <g0>20.5756729407</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp>
+            <diff_exp_q>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7006</exptid>
+            <file_atmos>zjky_2000.astart</file_atmos>
+            <file_ocean>zjky_2000.ostart</file_ocean>
+            <vf1>2.3259475859</vf1>
+            <ct>0.000480841169577</ct>
+            <cw_land>0.000114007811038</cw_land>
+            <cw_sea>2.42023433115e-05</cw_sea>
+            <rhcrit>0.95, 0.9, 0.85, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339</rhcrit>
+            <eacf>0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.683862225231, 0.647089780185, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138</eacf>
+            <entcoef>3.29267783401</entcoef>
+            <alpham>0.546361834459</alpham>
+            <dtice>6.6884403958</dtice>
+            <ice_size>2.35591011068e-05</ice_size>
+            <dtheta>0.81401</dtheta>
+            <isopyc>143.909867752</isopyc>
+            <vertvisc>5.08143404538e-05</vertvisc>
+            <vdiffsurf>1.83036145056e-05</vdiffsurf>
+            <vdiffdepth>8.2398572515e-08</vdiffdepth>
+            <mllam>1.21627288607</mllam>
+            <mldel>18.8587542943</mldel>
+            <l0>0.000120147358835</l0>
+            <l1>5.46208377471e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.77115104287</volsca>
+            <anthsca>1.22408278096</anthsca>
+            <start_level_gwdrag>4.0</start_level_gwdrag>
+            <kay_gwave>18523.8971389</kay_gwave>
+            <kay_lee_gwave>277858.457084</kay_lee_gwave>
+            <asym_lambda>0.322801305297</asym_lambda>
+            <charnock>0.0183838090278</charnock>
+            <z0fsea>0.00108047681958</z0fsea>
+            <g0>20.5756729407</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp>
+            <diff_exp_q>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7007</exptid>
+            <file_atmos>zjky_2000.astart</file_atmos>
+            <file_ocean>zjky_2000.ostart</file_ocean>
+            <vf1>2.3259475859</vf1>
+            <ct>0.000480841169577</ct>
+            <cw_land>0.000114007811038</cw_land>
+            <cw_sea>2.42023433115e-05</cw_sea>
+            <rhcrit>0.95, 0.9, 0.85, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339, 0.759249140339</rhcrit>
+            <eacf>0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.720634670277, 0.683862225231, 0.647089780185, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138, 0.610317335138</eacf>
+            <entcoef>3.29267783401</entcoef>
+            <alpham>0.546361834459</alpham>
+            <dtice>6.6884403958</dtice>
+            <ice_size>2.35591011068e-05</ice_size>
+            <dtheta>0.57357</dtheta>
+            <isopyc>143.909867752</isopyc>
+            <vertvisc>5.08143404538e-05</vertvisc>
+            <vdiffsurf>1.83036145056e-05</vdiffsurf>
+            <vdiffdepth>8.2398572515e-08</vdiffdepth>
+            <mllam>1.21627288607</mllam>
+            <mldel>18.8587542943</mldel>
+            <l0>0.000120147358835</l0>
+            <l1>5.46208377471e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>1.77115104287</volsca>
+            <anthsca>1.22408278096</anthsca>
+            <start_level_gwdrag>4.0</start_level_gwdrag>
+            <kay_gwave>18523.8971389</kay_gwave>
+            <kay_lee_gwave>277858.457084</kay_lee_gwave>
+            <asym_lambda>0.322801305297</asym_lambda>
+            <charnock>0.0183838090278</charnock>
+            <z0fsea>0.00108047681958</z0fsea>
+            <g0>20.5756729407</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 102031900.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp>
+            <diff_exp_q>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7008</exptid>
+            <file_atmos>z85h_2000.astart</file_atmos>
+            <file_ocean>z85h_2000.ostart</file_ocean>
+            <vf1>1.91317222054</vf1>
+            <ct>5.37188993767e-05</ct>
+            <cw_land>0.000533954938103</cw_land>
+            <cw_sea>0.000133488734526</cw_sea>
+            <rhcrit>0.95, 0.9, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823</rhcrit>
+            <eacf>0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.543852850304, 0.535082280243, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182</eacf>
+            <entcoef>3.39946669561</entcoef>
+            <alpham>0.51044769509</alpham>
+            <dtice>9.25373606502</dtice>
+            <ice_size>4.9690355877e-05</ice_size>
+            <dtheta>0.0</dtheta>
+            <isopyc>226.409719293</isopyc>
+            <vertvisc>7.7714923817e-05</vertvisc>
+            <vdiffsurf>4.29494753579e-06</vdiffsurf>
+            <vdiffdepth>3.10378303691e-08</vdiffdepth>
+            <mllam>1.2583508472</mllam>
+            <mldel>70.0311753476</mldel>
+            <l0>0.000148755276422</l0>
+            <l1>6.7626437204e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>0.740873486408</volsca>
+            <anthsca>0.575000145244</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>15647.9905309</kay_gwave>
+            <kay_lee_gwave>234719.857963</kay_lee_gwave>
+            <asym_lambda>0.115511757047</asym_lambda>
+            <charnock>0.0161819011499</charnock>
+            <z0fsea>0.00584939485208</z0fsea>
+            <g0>14.3891082187</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>7009</exptid>
+            <file_atmos>z85h_2000.astart</file_atmos>
+            <file_ocean>z85h_2000.ostart</file_ocean>
+            <vf1>1.91317222054</vf1>
+            <ct>5.37188993767e-05</ct>
+            <cw_land>0.000533954938103</cw_land>
+            <cw_sea>0.000133488734526</cw_sea>
+            <rhcrit>0.95, 0.9, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823</rhcrit>
+            <eacf>0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.543852850304, 0.535082280243, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182</eacf>
+            <entcoef>3.39946669561</entcoef>
+            <alpham>0.51044769509</alpham>
+            <dtice>9.25373606502</dtice>
+            <ice_size>4.9690355877e-05</ice_size>
+            <dtheta>0.91172</dtheta>
+            <isopyc>226.409719293</isopyc>
+            <vertvisc>7.7714923817e-05</vertvisc>
+            <vdiffsurf>4.29494753579e-06</vdiffsurf>
+            <vdiffdepth>3.10378303691e-08</vdiffdepth>
+            <mllam>1.2583508472</mllam>
+            <mldel>70.0311753476</mldel>
+            <l0>0.000148755276422</l0>
+            <l1>6.7626437204e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>0.740873486408</volsca>
+            <anthsca>0.575000145244</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>15647.9905309</kay_gwave>
+            <kay_lee_gwave>234719.857963</kay_lee_gwave>
+            <asym_lambda>0.115511757047</asym_lambda>
+            <charnock>0.0161819011499</charnock>
+            <z0fsea>0.00584939485208</z0fsea>
+            <g0>14.3891082187</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700a</exptid>
+            <file_atmos>z85h_2000.astart</file_atmos>
+            <file_ocean>z85h_2000.ostart</file_ocean>
+            <vf1>1.91317222054</vf1>
+            <ct>5.37188993767e-05</ct>
+            <cw_land>0.000533954938103</cw_land>
+            <cw_sea>0.000133488734526</cw_sea>
+            <rhcrit>0.95, 0.9, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823</rhcrit>
+            <eacf>0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.543852850304, 0.535082280243, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182</eacf>
+            <entcoef>3.39946669561</entcoef>
+            <alpham>0.51044769509</alpham>
+            <dtice>9.25373606502</dtice>
+            <ice_size>4.9690355877e-05</ice_size>
+            <dtheta>0.81401</dtheta>
+            <isopyc>226.409719293</isopyc>
+            <vertvisc>7.7714923817e-05</vertvisc>
+            <vdiffsurf>4.29494753579e-06</vdiffsurf>
+            <vdiffdepth>3.10378303691e-08</vdiffdepth>
+            <mllam>1.2583508472</mllam>
+            <mldel>70.0311753476</mldel>
+            <l0>0.000148755276422</l0>
+            <l1>6.7626437204e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>0.740873486408</volsca>
+            <anthsca>0.575000145244</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>15647.9905309</kay_gwave>
+            <kay_lee_gwave>234719.857963</kay_lee_gwave>
+            <asym_lambda>0.115511757047</asym_lambda>
+            <charnock>0.0161819011499</charnock>
+            <z0fsea>0.00584939485208</z0fsea>
+            <g0>14.3891082187</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700b</exptid>
+            <file_atmos>z85h_2000.astart</file_atmos>
+            <file_ocean>z85h_2000.ostart</file_ocean>
+            <vf1>1.91317222054</vf1>
+            <ct>5.37188993767e-05</ct>
+            <cw_land>0.000533954938103</cw_land>
+            <cw_sea>0.000133488734526</cw_sea>
+            <rhcrit>0.95, 0.9, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823, 0.856000556823</rhcrit>
+            <eacf>0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.552623420365, 0.543852850304, 0.535082280243, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182, 0.526311710182</eacf>
+            <entcoef>3.39946669561</entcoef>
+            <alpham>0.51044769509</alpham>
+            <dtice>9.25373606502</dtice>
+            <ice_size>4.9690355877e-05</ice_size>
+            <dtheta>0.57357</dtheta>
+            <isopyc>226.409719293</isopyc>
+            <vertvisc>7.7714923817e-05</vertvisc>
+            <vdiffsurf>4.29494753579e-06</vdiffsurf>
+            <vdiffdepth>3.10378303691e-08</vdiffdepth>
+            <mllam>1.2583508472</mllam>
+            <mldel>70.0311753476</mldel>
+            <l0>0.000148755276422</l0>
+            <l1>6.7626437204e-05</l1>
+            <so2_high_level>3.0</so2_high_level>
+            <volsca>0.740873486408</volsca>
+            <anthsca>0.575000145244</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>15647.9905309</kay_gwave>
+            <kay_lee_gwave>234719.857963</kay_lee_gwave>
+            <asym_lambda>0.115511757047</asym_lambda>
+            <charnock>0.0161819011499</charnock>
+            <z0fsea>0.00584939485208</z0fsea>
+            <g0>14.3891082187</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 481212700.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700c</exptid>
+            <file_atmos>z85k_2000.astart</file_atmos>
+            <file_ocean>z85k_2000.ostart</file_ocean>
+            <vf1>1.86613763088</vf1>
+            <ct>0.000418568316763</ct>
+            <cw_land>0.00128327265892</cw_land>
+            <cw_sea>0.00032081816473</cw_sea>
+            <rhcrit>0.95, 0.9, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326</rhcrit>
+            <eacf>0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.565041524944, 0.552033219955, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966</eacf>
+            <entcoef>5.32143940514</entcoef>
+            <alpham>0.510076898813</alpham>
+            <dtice>9.28022151335</dtice>
+            <ice_size>4.58165353803e-05</ice_size>
+            <dtheta>0.0</dtheta>
+            <isopyc>2233.08444927</isopyc>
+            <vertvisc>9.28277419905e-05</vertvisc>
+            <vdiffsurf>1.8882170407e-05</vdiffsurf>
+            <vdiffdepth>1.99982763342e-08</vdiffdepth>
+            <mllam>0.335234921871</mllam>
+            <mldel>140.210834154</mldel>
+            <l0>9.56680040439e-05</l0>
+            <l1>4.34921464538e-05</l1>
+            <so2_high_level>5.0</so2_high_level>
+            <volsca>1.6683979145</volsca>
+            <anthsca>1.73466780919</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>16579.3697167</kay_gwave>
+            <kay_lee_gwave>248690.54575</kay_lee_gwave>
+            <asym_lambda>0.285251079904</asym_lambda>
+            <charnock>0.0188484247524</charnock>
+            <z0fsea>0.00150501894565</z0fsea>
+            <g0>21.6534740403</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700d</exptid>
+            <file_atmos>z85k_2000.astart</file_atmos>
+            <file_ocean>z85k_2000.ostart</file_ocean>
+            <vf1>1.86613763088</vf1>
+            <ct>0.000418568316763</ct>
+            <cw_land>0.00128327265892</cw_land>
+            <cw_sea>0.00032081816473</cw_sea>
+            <rhcrit>0.95, 0.9, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326</rhcrit>
+            <eacf>0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.565041524944, 0.552033219955, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966</eacf>
+            <entcoef>5.32143940514</entcoef>
+            <alpham>0.510076898813</alpham>
+            <dtice>9.28022151335</dtice>
+            <ice_size>4.58165353803e-05</ice_size>
+            <dtheta>0.91172</dtheta>
+            <isopyc>2233.08444927</isopyc>
+            <vertvisc>9.28277419905e-05</vertvisc>
+            <vdiffsurf>1.8882170407e-05</vdiffsurf>
+            <vdiffdepth>1.99982763342e-08</vdiffdepth>
+            <mllam>0.335234921871</mllam>
+            <mldel>140.210834154</mldel>
+            <l0>9.56680040439e-05</l0>
+            <l1>4.34921464538e-05</l1>
+            <so2_high_level>5.0</so2_high_level>
+            <volsca>1.6683979145</volsca>
+            <anthsca>1.73466780919</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>16579.3697167</kay_gwave>
+            <kay_lee_gwave>248690.54575</kay_lee_gwave>
+            <asym_lambda>0.285251079904</asym_lambda>
+            <charnock>0.0188484247524</charnock>
+            <z0fsea>0.00150501894565</z0fsea>
+            <g0>21.6534740403</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700e</exptid>
+            <file_atmos>z85k_2000.astart</file_atmos>
+            <file_ocean>z85k_2000.ostart</file_ocean>
+            <vf1>1.86613763088</vf1>
+            <ct>0.000418568316763</ct>
+            <cw_land>0.00128327265892</cw_land>
+            <cw_sea>0.00032081816473</cw_sea>
+            <rhcrit>0.95, 0.9, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326</rhcrit>
+            <eacf>0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.565041524944, 0.552033219955, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966</eacf>
+            <entcoef>5.32143940514</entcoef>
+            <alpham>0.510076898813</alpham>
+            <dtice>9.28022151335</dtice>
+            <ice_size>4.58165353803e-05</ice_size>
+            <dtheta>0.81401</dtheta>
+            <isopyc>2233.08444927</isopyc>
+            <vertvisc>9.28277419905e-05</vertvisc>
+            <vdiffsurf>1.8882170407e-05</vdiffsurf>
+            <vdiffdepth>1.99982763342e-08</vdiffdepth>
+            <mllam>0.335234921871</mllam>
+            <mldel>140.210834154</mldel>
+            <l0>9.56680040439e-05</l0>
+            <l1>4.34921464538e-05</l1>
+            <so2_high_level>5.0</so2_high_level>
+            <volsca>1.6683979145</volsca>
+            <anthsca>1.73466780919</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>16579.3697167</kay_gwave>
+            <kay_lee_gwave>248690.54575</kay_lee_gwave>
+            <asym_lambda>0.285251079904</asym_lambda>
+            <charnock>0.0188484247524</charnock>
+            <z0fsea>0.00150501894565</z0fsea>
+            <g0>21.6534740403</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700f</exptid>
+            <file_atmos>z85k_2000.astart</file_atmos>
+            <file_ocean>z85k_2000.ostart</file_ocean>
+            <vf1>1.86613763088</vf1>
+            <ct>0.000418568316763</ct>
+            <cw_land>0.00128327265892</cw_land>
+            <cw_sea>0.00032081816473</cw_sea>
+            <rhcrit>0.95, 0.9, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326, 0.86780405326</rhcrit>
+            <eacf>0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.578049829932, 0.565041524944, 0.552033219955, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966, 0.539024914966</eacf>
+            <entcoef>5.32143940514</entcoef>
+            <alpham>0.510076898813</alpham>
+            <dtice>9.28022151335</dtice>
+            <ice_size>4.58165353803e-05</ice_size>
+            <dtheta>0.57357</dtheta>
+            <isopyc>2233.08444927</isopyc>
+            <vertvisc>9.28277419905e-05</vertvisc>
+            <vdiffsurf>1.8882170407e-05</vdiffsurf>
+            <vdiffdepth>1.99982763342e-08</vdiffdepth>
+            <mllam>0.335234921871</mllam>
+            <mldel>140.210834154</mldel>
+            <l0>9.56680040439e-05</l0>
+            <l1>4.34921464538e-05</l1>
+            <so2_high_level>5.0</so2_high_level>
+            <volsca>1.6683979145</volsca>
+            <anthsca>1.73466780919</anthsca>
+            <start_level_gwdrag>5.0</start_level_gwdrag>
+            <kay_gwave>16579.3697167</kay_gwave>
+            <kay_lee_gwave>248690.54575</kay_lee_gwave>
+            <asym_lambda>0.285251079904</asym_lambda>
+            <charnock>0.0188484247524</charnock>
+            <z0fsea>0.00150501894565</z0fsea>
+            <g0>21.6534740403</g0>
+            <r_layers>3.0, 3.0, 2.0, 2.0</r_layers>
+            <diff_coeff>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 571512100.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 1.0</diff_exp>
+            <diff_exp_q>3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+    <experiment>
+        <parameters>
+            <file_flux>waterfix.ancil.be.32</file_flux>
+            <file_so2dms>SO2DMS_cmip6h_2000_2014_n48</file_so2dms>
+            <file_volc>NAT_VOLC</file_volc>
+            <file_volcanic>sato_hist73lat_volc_20002015</file_volcanic>
+            <file_sulphox>sulpc_oxidants_19_A2_1990</file_sulphox>
+            <file_spec_sw>spec3a_sw_3_asol2c_hadcm3</file_spec_sw>
+            <file_spec_lw>spec3a_lw_3_asol2c_hadcm3</file_spec_lw>
+            <file_ozone>ozone_cmip6hist_2000_2014_n48</file_ozone>
+            <file_solar>solar_cmip6_rescale_f</file_solar>
+            <file_ghg>ghg_cmip6_hist_19992015_f</file_ghg>
+            <run_years>2</run_years>
+            <model_start_year>2000</model_start_year>
+            <exptid>700g</exptid>
+            <file_atmos>zhsj_2000.astart</file_atmos>
+            <file_ocean>zhsj_2000.ostart</file_ocean>
+            <vf1>0.758702631519</vf1>
+            <ct>0.000464943058919</ct>
+            <cw_land>0.0018787588402</cw_land>
+            <cw_sea>0.000469689710049</cw_sea>
+            <rhcrit>0.95, 0.9, 0.85, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888, 0.625370296888</rhcrit>
+            <eacf>0.601052348505, 0.601052348505, 0.601052348505, 0.601052348505, 0.601052348505, 0.584210290421, 0.567368232337, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253, 0.550526174253</eacf>
+            <entcoef>1.4712696058</entcoef>
+            <alpham>0.608353061975</alpham>
+            <dtice>3.56176017592</dtice>
+            <ice_size>5.11941093218e-05</ice_size>
+            <dtheta>0.0</dtheta>
+            <isopyc>1019.02070071</isopyc>
+            <vertvisc>8.96350770892e-05</vertvisc>
+            <vdiffsurf>1.46824241255e-05</vdiffsurf>
+            <vdiffdepth>9.74317549689e-08</vdiffdepth>
+            <mllam>0.429357269082</mllam>
+            <mldel>129.843836173</mldel>
+            <l0>0.00011101937266</l0>
+            <l1>5.04711148016e-05</l1>
+            <so2_high_level>5.0</so2_high_level>
+            <volsca>0.930276462143</volsca>
+            <anthsca>1.68493442068</anthsca>
+            <start_level_gwdrag>4.0</start_level_gwdrag>
+            <kay_gwave>16203.6140796</kay_gwave>
+            <kay_lee_gwave>243054.211193</kay_lee_gwave>
+            <asym_lambda>0.342085490256</asym_lambda>
+            <charnock>0.0158943064379</charnock>
+            <z0fsea>0.00389889350094</z0fsea>
+            <g0>14.5849957507</g0>
+            <r_layers>2.0, 2.0, 1.0, 1.0</r_layers>
+            <diff_coeff>68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 4000000.0</diff_coeff>
+            <diff_coeff_q>68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 68426920.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 150000000.0, 4000000.0</diff_coeff_q>
+            <diff_exp>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp>
+            <diff_exp_q>2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0</diff_exp_q>
+        </parameters>
+    </experiment>
+</WorkGen>
