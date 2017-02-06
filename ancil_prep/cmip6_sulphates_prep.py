@@ -23,7 +23,7 @@ cube.coord('latitude').var_name = 'latitude'
 cube.coord('latitude').units = 'degrees_north'
 
 #Add conversion factor into kg/m2/s of S as opposed to SO2
-cube = 32.066 / 64.066 * cube
+cube.data = 32.066 / 64.066 * cube.data
 #Alternative conversion factor: 1TgSO2/yr = 16073668268528.676 kgm-2s-1 of SO2
 
 #Half industry and all of energy go into high level SO2 emissions (Met Office convention)
@@ -45,37 +45,38 @@ surf_cube.var_name = 'field569'
 surf_cube.units='kg/m2/s'
 
 #Load the DMS fields
-dms_nc = 'NMVOC-C2H6S-em-biomassburning_input4MIPs_emissions_CMIP_VUA-CMIP-BB4CMIP6-1-2_gn_185001-201512.nc'
-os.system('ncatted -O -a calendar,time,m,c,"365_day" '+cmip6_data_dir+dms_nc)
-dms_cube = iris.load_cube(cmip6_data_dir+dms_nc)
-iris.coord_categorisation.add_year(dms_cube, 'time', name='year')
-time_constraint = iris.Constraint(year=lambda y: 2000.0<=y<2015.0)
-dms_cube = dms_cube.extract(time_constraint) 
+#dms_nc = 'NMVOC-C2H6S-em-biomassburning_input4MIPs_emissions_CMIP_VUA-CMIP-BB4CMIP6-1-2_gn_185001-201512.nc'
+dms_nc = 'DMS_rcp26_20002014.nc'
+#os.system('ncatted -O -a calendar,t,m,c,"365_day" '+cmip6_data_dir_regrid+dms_nc)
+#dms_cube = iris.load_cube(cmip6_data_dir_regrid+dms_nc)
+#iris.coord_categorisation.add_year(dms_cube, 'time', name='year')
+#time_constraint = iris.Constraint(year=lambda y: 2000.0<=y<2015.0)
+#dms_cube = dms_cube.extract(time_constraint) 
 
-dms_cube.coord('time').bounds = None
-dms_cube.coord('time').convert_units(cube.coord('time').units)
-dms_cube.coord('time').points = np.arange(first_time_alt,first_time_alt + 30*len(cube.coord('time').points),step=30.)
-dms_cube.coord('time').attributes = {'realtopology': 'linear'}
-dms_cube.coord('longitude').attributes = cube.coord('longitude').attributes
-dms_cube.coord('latitude').attributes = cube.coord('latitude').attributes
-
-
-dms_cube.coord('longitude').var_name = 'longitude'
-dms_cube.coord('longitude').units = 'degrees_east'
-dms_cube.coord('latitude').var_name = 'latitude'
-dms_cube.coord('latitude').units = 'degrees_north'
-dms_cube.rename('DIMETHYL SULPHIDE EMISSIONS (ANCIL)')
-dms_cube.long_name ='DIMETHYL SULPHIDE EMISSIONS (ANCIL)'
-dms_cube.var_name = 'field570'
-dms_cube.units='kg/m2/s'
-del dms_cube.attributes['title']
+#dms_cube.coord('time').bounds = None
+#dms_cube.coord('time').convert_units(cube.coord('time').units)
+#dms_cube.coord('time').points = np.arange(first_time_alt,first_time_alt + 30*len(cube.coord('time').points),step=30.)
+#dms_cube.coord('time').attributes = {'realtopology': 'linear'}
+#dms_cube.coord('longitude').attributes = cube.coord('longitude').attributes
+#dms_cube.coord('latitude').attributes = cube.coord('latitude').attributes
 
 
+#dms_cube.coord('longitude').var_name = 'longitude'
+#dms_cube.coord('longitude').units = 'degrees_east'
+#dms_cube.coord('latitude').var_name = 'latitude'
+#dms_cube.coord('latitude').units = 'degrees_north'
+#dms_cube.rename('DIMETHYL SULPHIDE EMISSIONS (ANCIL)')
+#dms_cube.long_name ='DIMETHYL SULPHIDE EMISSIONS (ANCIL)'
+#dms_cube.var_name = 'field570'
+#dms_cube.units='kg/m2/s'
+#del dms_cube.attributes['title']
 
-cubes = iris.cube.CubeList([dms_cube,surf_cube,high_cube]) 
+
+
+cubes = iris.cube.CubeList([surf_cube,high_cube]) 
 out_nc_raw = 'SO2DMS-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc'
 
-out_nc_raw_names = ['DMS-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc','SO2surf-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc','SO2high-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc']
+out_nc_raw_names = ['SO2surf-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc','SO2high-em-anthro_input4MIPs_emissions_CMIP_CEDS-v2016-07-26-gr_200001-201412.nc']
 out_nc_regrid = out_nc_raw[:-3]+'_n48.nc'
 for i in range(0,len(out_nc_raw_names)):
   iris.fileformats.netcdf.save(cubes[i],filename=cmip6_data_dir+out_nc_raw_names[i],netcdf_format='NETCDF4')
@@ -84,12 +85,15 @@ for i in range(0,len(out_nc_raw_names)):
 #Can't find any CMIP6 specification for ocean DMS (only biomass burning), maybe because
 #this is generated interactively by ocean biochemistry?
 #sub in RCP2.6 DMS emissions in here instead  
-os.system('cp '+cmip6_data_dir_regrid+'DMS_rcp26_20002014.nc ' +cmip6_data_dir_regrid + out_nc_regrid)
+os.system('cp '+cmip6_data_dir_regrid+dms_nc+' ' +cmip6_data_dir_regrid + out_nc_regrid)
 os.system('ncrename -d t,time -v t,time ' +cmip6_data_dir_regrid + out_nc_regrid)
+os.system('ncwa -a surface '+cmip6_data_dir_regrid+out_nc_regrid+' -o '+cmip6_data_dir_regrid+out_nc_regrid)
+os.system('ncks -A '+cmip6_data_dir_regrid+out_nc_raw_names[0][:-3]+'_n48.nc '+cmip6_data_dir_regrid+out_nc_regrid)
 os.system('ncks -A '+cmip6_data_dir_regrid+out_nc_raw_names[1][:-3]+'_n48.nc '+cmip6_data_dir_regrid+out_nc_regrid)
-os.system('ncks -A '+cmip6_data_dir_regrid+out_nc_raw_names[2][:-3]+'_n48.nc '+cmip6_data_dir_regrid+out_nc_regrid)
 
-os.system('ncatted -O -a calendar,time,m,c,"360-day" '+cmip6_data_dir_regrid+out_nc_regrid)
+os.system('ncatted -O -a calendar,time,m,c,"360_day" '+cmip6_data_dir_regrid+out_nc_regrid)
+os.system('ncatted -O -a history,global,d,, '+ cmip6_data_dir_regrid+out_nc_regrid)
+
 
 #Adapt mkancil template
 subprocess.call(['cp','working_so2dms_conv.namelist','temp_working_so2dms_conv.namelist'])
