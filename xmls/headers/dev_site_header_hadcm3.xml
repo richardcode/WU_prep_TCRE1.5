@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<WorkGen>
+        <ancil_db_name>cpdnexpt</ancil_db_name>
+        <ancil_db_user>anciluser</ancil_db_user>
+        <ancil_db_host>sirius.oerc.ox.ac.uk</ancil_db_host>
+        <dbexpt>cpdnexpt_dev</dbexpt>
+        <app_config>config_dir/config_hadcm3s_v2.2_monthly.xml</app_config>
+        <upload_handler>http://vorvadoss.oerc.ox.ac.uk/cpdnboinc_dev_cgi/file_upload_handler</upload_handler>
+        <download_url_base>http://vorvadoss.oerc.ox.ac.uk/cpdnboinc_dev/download</download_url_base>
+        <result_template_prefix>upload_templates/dev2.2/result_template_dev</result_template_prefix>
+        <download_dir_base>/storage/boinc/projects/cpdnboinc_dev/download</download_dir_base>
+        <project_dir>/var/www/boinc/projects/cpdnboinc_dev</project_dir>
+        <namelist_dir>namelist_template_files/HadCM3S</namelist_dir>
+        <global_stashc>xabnk.stashc.monthly</global_stashc>
+        <batch_name>HadCM3S 8.30 TCRE ancil test</batch_name>
+        <batch_desc>HadCM3S 8.30 test of TCRE ancils with monthly uploads for https switch</batch_desc>
+        <batch_owner>Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;,Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;</batch_owner>
+        <batch_first_start_year>2000</batch_first_start_year>
+        <batch_last_start_year>2000</batch_last_start_year>
+        <batch_umid_start>7000</batch_umid_start>
+        <batch_umid_end>700h</batch_umid_end>
+        <batch_proj>TCRE</batch_proj>
+        <batch_tech_info>Test of HadCM3S 8.30 with new TCRE ancils. Two month test runs to check monthly output and upload of restart and .out files. Uses updated JOB_ATMOS_ID and JOB_OCEAN_ID and changes strPattern in decadal mean for consistency with wah2</batch_tech_info>
+
+</WorkGen>

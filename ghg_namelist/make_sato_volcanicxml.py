@@ -2,7 +2,7 @@
 
 import numpy as np
 
-outfile = 'sato_hist73lat_volc_20002014'
+outfile = 'sato_hist73lat_volc_20002015'
 f_in = open('regridded_sato.txt','r')
 aod_month = []
 for line in f_in:
@@ -12,7 +12,7 @@ for line in f_in:
 add_zeros = np.zeros((73))
 inline = ','.join(["{:.18e}".format(f) for f in add_zeros])
 counter=1
-while counter<=24:
+while counter<=36:
   aod_month.append(inline)
   counter = counter + 1
 
@@ -23,7 +23,7 @@ fout=open(outfile, 'w')
 fout.write("<volcanic>\n")
 
 start_year = 2000
-end_year = 2014
+end_year = 2015
 
 year=start_year
 month=0

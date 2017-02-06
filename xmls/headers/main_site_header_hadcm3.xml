@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<WorkGen>
+        <dbexpt>cpdnexpt</dbexpt>
+        <app_config>config_dir/config_hadcm3s_v2.2_yearly.xml</app_config>
+	<!--Upload information-->
+        <upload_handler>http://upload2.cpdn.org/cgi-bin/file_upload_handler</upload_handler>
+        <result_template_prefix>upload_templates/oxford2.2/result_template_upload2</result_template_prefix>
+        <!--Download information for participants to get workunits-->
+        <download_url_base>http://download.cpdn.org/download/</download_url_base>
+        <download_dir_base>/storage/download/</download_dir_base>
+        <project_dir>/var/www/boinc/projects/cpdnboinc</project_dir>
+        <namelist_dir>namelist_template_files/HadCM3S</namelist_dir>
+        <global_stashc>xabnk.stashc.monthly</global_stashc>
+        <batch_name>HadCM3S 8.30 TCRE ancil test</batch_name>
+        <batch_desc>HadCM3S 8.30 test of TCRE ancils with monthly uploads for https switch</batch_desc>
+        <batch_owner>Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt; Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;</batch_owner>
+        <batch_first_start_year>2000</batch_first_start_year>
+        <batch_last_start_year>2000</batch_last_start_year>
+        <batch_umid_start>7000</batch_umid_start>
+        <batch_umid_end>7003</batch_umid_end>
+        <batch_proj>TCRE</batch_proj>
+        <batch_tech_info>Test of HadCM3S 8.30 with new TCRE ancils. Two month test runs to check monthly output and upload of restart and .out files. Uses updated JOB_ATMOS_ID and JOB_OCEAN_ID and changes strPattern in decadal mean for consistency with wah2</batch_tech_info>
+</WorkGen>
