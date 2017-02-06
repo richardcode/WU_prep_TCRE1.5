@@ -14,7 +14,7 @@
         <global_stashc>xabnk.stashc.monthly</global_stashc>
         <batch_name>HadCM3S 8.30 TCRE ancil test</batch_name>
         <batch_desc>HadCM3S 8.30 test of TCRE ancils with monthly uploads for https switch</batch_desc>
-        <batch_owner>Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;,Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;</batch_owner>
+        <batch_owner>Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;, Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;</batch_owner>
         <batch_first_start_year>2000</batch_first_start_year>
         <batch_last_start_year>2000</batch_last_start_year>
         <batch_umid_start>7000</batch_umid_start>
