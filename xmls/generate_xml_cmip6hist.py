@@ -105,7 +105,7 @@ def xmlgen():
   count  =0
 
   outtreeroot.find('batch_name').text = 'HadCM3S TCRE historical integration'
-  outtreeroot.find('batch_owner').text = 'Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;, Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;'
+  outtreeroot.find('batch_owner').text = r'Richard Millar &lt;richard.millar@physics.ox.ac.uk&gt;, Sarah Sparrow &lt;sarah.sparrow@oerc.ox.ac.uk&gt;'
   outtreeroot.find('batch_first_start_year').text = str(model_start_year)
   outtreeroot.find('batch_last_start_year').text = str(model_start_year)
   outtreeroot.find('batch_umid_start').text = umid
