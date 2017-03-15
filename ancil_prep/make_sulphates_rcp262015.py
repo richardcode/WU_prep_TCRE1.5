@@ -136,7 +136,7 @@ def constant_2015():
   #Set the year-on-year proportional reductions to be nothing
   yoy_rates = calc_perc_reducts()
   yoy_rates = np.array(yoy_rates)
-  yoy_rates = ones_like(yoy_rates)
+  yoy_rates = np.ones_like(yoy_rates)
 
   #Create coordinates for new nc file between 2014 and 2100
   lat_coord = cubes[0].coord('latitude')
