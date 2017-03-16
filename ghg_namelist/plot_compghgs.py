@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Load in the .csv file for the historical concentrations
-ghg_infile = '/Users/richardmillar/Documents/TCRE1p5/WU_prep_TCRE1.5/ghg_namelist/cmip6_histGHGConcentrations.csv'
+ghg_infile = '/Users/rm604/Documents/TCRE1p5/WU_prep_TCRE1.5/ghg_namelist/cmip6_histGHGConcentrations.csv'
 
 ghg_data = np.genfromtxt(ghg_infile,skip_header=22,delimiter=",")
 years = ghg_data[:,0]
@@ -13,7 +13,7 @@ ghg_data = ghg_data[:,[1,2,3,28,27,29,32,7,4]]
 
 
 #Load the CMIP5 historical concentrations
-rcp_files = ['/Users/richardmillar/Documents/Thesis_Mac_work/RCPs/8.5/RCP85_MIDYEAR_CONCENTRATIONS.csv','/Users/richardmillar/Documents/Thesis_Mac_work/RCPs/6/RCP6_MIDYEAR_CONCENTRATIONS.csv','/Users/richardmillar/Documents/Thesis_Mac_work/RCPs/4.5/RCP45_MIDYEAR_CONCENTRATIONS.csv','/Users/richardmillar/Documents/Thesis_Mac_work/RCPs/3-PD/RCP3PD_MIDYEAR_CONCENTRATIONS.csv']
+rcp_files = ['/Users/rm604/Documents/Thesis_Mac_work/RCPs/8.5/RCP85_MIDYEAR_CONCENTRATIONS.csv','/Users/rm604/Documents/Thesis_Mac_work/RCPs/6/RCP6_MIDYEAR_CONCENTRATIONS.csv','/Users/rm604/Documents/Thesis_Mac_work/RCPs/4.5/RCP45_MIDYEAR_CONCENTRATIONS.csv','/Users/rm604/Documents/Thesis_Mac_work/RCPs/3-PD/RCP3PD_MIDYEAR_CONCENTRATIONS.csv']
 
 rcp_data=[]
 for cmip5_infile in rcp_files:
