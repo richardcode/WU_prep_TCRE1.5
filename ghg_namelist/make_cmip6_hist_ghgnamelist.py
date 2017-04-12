@@ -18,7 +18,7 @@ def print_line_len(full_line,f_out,max_length=75):
 
   return
 
-def main()
+def main():
 
   #Load in the .csv file for the historical concentrations
   ghg_infile = '/Users/rm604/Documents/TCRE1p5/WU_prep_TCRE1.5/ghg_namelist/cmip6_histGHGConcentrations.csv'
